@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming Technology - Course Materials</title>
+    <link rel="stylesheet" href="site-lib/styles/global-variable-styles.css" />
+    <link rel="stylesheet" href="site-lib/styles/main-styles.css" />
+    <link rel="stylesheet" href="site-lib/styles/obsidian.css" />
+    <link rel="stylesheet" href="site-lib/styles/theme.css" />
+    <link rel="icon" type="image/png" href="site-lib/media/favicon.png" />
+    <style>
+      html {
+        box-sizing: border-box;
+        font-size: 16px;
+        height: auto;
+        min-height: 100vh;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        height: auto;
+        background: url("site-lib/media/e24acbd9-75b4-4f97-9173-2d7630d215b8.png")
+            no-repeat center center,
+          linear-gradient(120deg, #e0e7ff 0%, #f8fafc 100%);
+        background-attachment: scroll;
+        background-size: cover, 100% 100%;
+        font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .landing-header {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 1.5rem;
+        margin: 1.2rem auto 1rem auto;
+        max-width: 98vw;
+        width: 100%;
+        padding: 1.2rem 1rem 1rem 1rem;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        text-align: center;
+      }
+      .course-logo {
+        margin-bottom: 1rem;
+        max-width: 80vw;
+        height: auto;
+      }
+      .subtitle {
+        color: #6366f1;
+        font-size: 1.1rem;
+        margin-bottom: 0;
+      }
+      .landing-main {
+        max-width: 100vw;
+        margin: 0 auto 1.5rem auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+        padding: 0 0.5rem;
+      }
+      .landing-main section {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 1.2rem;
+        box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.08);
+        padding: 1.2rem 1rem;
+        width: 100%;
+        max-width: 340px;
+        min-width: 0;
+        margin: 0 auto;
+      }
+      .landing-main h2 {
+        color: #3730a3;
+        margin-top: 0;
+        font-size: 1.3rem;
+      }
+      .landing-footer {
+        text-align: center;
+        color: #6b7280;
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 1rem;
+        max-width: 95vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.7rem 0;
+        box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.05);
+      }
+      @media (min-width: 600px) {
+        .landing-header {
+          max-width: 700px;
+          padding: 2rem 2.5rem 1.5rem 2.5rem;
+        }
+        .landing-main {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 2rem;
+          max-width: 900px;
+        }
+        .landing-main section {
+          max-width: 320px;
+          min-width: 260px;
+        }
+        .course-logo {
+          max-width: 64px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="landing-header">
+      <img
+        src="site-lib/media/institute.png"
+        alt="Course Logo"
+        class="course-logo"
+        style="height: 64px"
+      />
+      <h1 style="font-size: 2.5rem; color: #3730a3; margin-bottom: 0.5rem">
+        Programming Technology
+      </h1>
+      <p class="subtitle">
+        Welcome to the course materials portal for the Programming Technology
+        discipline.
+      </p>
+    </header>
+    <!-- <nav class="landing-nav">
+      <ul>
+        <li><a href="#lectures">Lectures</a></li>
+        <li><a href="#assignments">Assignments</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </nav> -->
+    <main class="landing-main">
+      <section id="lectures">
+        <h2>Lectures</h2>
+        <p>Access lecture slides, notes, and recordings.</p>
+        <a
+          href="lessons.html"
+          style="color: #6366f1; text-decoration: none; font-weight: 500"
+          >Go to Lessons &rarr;</a
+        >
+      </section>
+      <section id="assignments">
+        <h2>Assignments</h2>
+        <p>Find programming assignments and submission guidelines.</p>
+        <!-- Add links to assignments here -->
+      </section>
+      <section id="resources">
+        <h2>Resources</h2>
+        <p>Explore additional resources, recommended readings, and tools.</p>
+        <!-- Add links to resources here -->
+      </section>
+    </main>
+    <footer class="landing-footer">
+      <p>&copy; 2025 Programming Technology. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
