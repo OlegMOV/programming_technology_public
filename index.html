@@ -3,162 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programming Technology - Course Materials</title>
-    <link rel="stylesheet" href="site-lib/styles/global-variable-styles.css" />
+    <title>Programming Discipline Landing Page</title>
     <link rel="stylesheet" href="site-lib/styles/main-styles.css" />
-    <link rel="stylesheet" href="site-lib/styles/obsidian.css" />
-    <link rel="stylesheet" href="site-lib/styles/theme.css" />
-    <link rel="icon" type="image/png" href="site-lib/media/favicon.png" />
+    <link rel="icon" href="site-lib/media/favicon.png" />
     <style>
-      html {
-        box-sizing: border-box;
-        font-size: 16px;
-        height: auto;
-        min-height: 100vh;
-      }
-      *,
-      *:before,
-      *:after {
-        box-sizing: inherit;
-      }
       body {
-        min-height: 100vh;
-        min-height: 100dvh;
-        height: auto;
-        background: url("site-lib/media/e24acbd9-75b4-4f97-9173-2d7630d215b8.png")
-            no-repeat center center,
-          linear-gradient(120deg, #e0e7ff 0%, #f8fafc 100%);
-        background-attachment: scroll;
-        background-size: cover, 100% 100%;
-        font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f4f6fa
+          url("site-lib/media/e24acbd9-75b4-4f97-9173-2d7630d215b8.png")
+          no-repeat center center fixed;
+        background-size: cover;
         margin: 0;
         padding: 0;
-        overflow-x: hidden;
       }
-      .landing-header {
-        background: rgba(255, 255, 255, 0.85);
-        border-radius: 1.5rem;
-        margin: 1.2rem auto 1rem auto;
-        max-width: 98vw;
-        width: 100%;
-        padding: 1.2rem 1rem 1rem 1rem;
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-        text-align: center;
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: #fff;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        padding: 32px;
       }
-      .course-logo {
-        margin-bottom: 1rem;
-        max-width: 80vw;
-        height: auto;
-      }
-      .subtitle {
-        color: #6366f1;
-        font-size: 1.1rem;
-        margin-bottom: 0;
-      }
-      .landing-main {
-        max-width: 100vw;
-        margin: 0 auto 1.5rem auto;
+      .header {
         display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
         align-items: center;
-        padding: 0 0.5rem;
+        gap: 20px;
       }
-      .landing-main section {
-        background: rgba(255, 255, 255, 0.85);
-        border-radius: 1.2rem;
-        box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.08);
-        padding: 1.2rem 1rem;
-        width: 100%;
-        max-width: 340px;
-        min-width: 0;
-        margin: 0 auto;
+      .header img {
+        height: 64px;
       }
-      .landing-main h2 {
-        color: #3730a3;
-        margin-top: 0;
-        font-size: 1.3rem;
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5em;
       }
-      .landing-footer {
+      .intro {
+        font-size: 1.2rem;
+        color: #444;
+        margin-bottom: 2em;
+      }
+      .lessons {
+        margin-top: 2em;
+      }
+      .lessons a {
+        display: block;
+        padding: 12px 0;
+        font-size: 1.1rem;
+        color: #2a5bd7;
+        text-decoration: none;
+        border-bottom: 1px solid #eee;
+        transition: color 0.2s;
+      }
+      .lessons a:hover {
+        color: #174ea6;
+      }
+      .footer {
+        margin-top: 3em;
         text-align: center;
-        color: #6b7280;
+        color: #888;
         font-size: 0.95rem;
-        margin-bottom: 1.2rem;
-        background: rgba(255, 255, 255, 0.7);
-        border-radius: 1rem;
-        max-width: 95vw;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0.7rem 0;
-        box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.05);
       }
-      @media (min-width: 600px) {
-        .landing-header {
-          max-width: 700px;
-          padding: 2rem 2.5rem 1.5rem 2.5rem;
+      @media (max-width: 600px) {
+        .container {
+          max-width: 98vw;
+          margin: 10px;
+          padding: 12px;
+          border-radius: 6px;
         }
-        .landing-main {
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: 2rem;
-          max-width: 900px;
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
         }
-        .landing-main section {
-          max-width: 320px;
-          min-width: 260px;
+        .header img {
+          height: 48px;
         }
-        .course-logo {
-          max-width: 64px;
+        h1 {
+          font-size: 1.5rem;
+        }
+        .intro {
+          font-size: 1rem;
+        }
+        .lessons a {
+          font-size: 1rem;
+          padding: 10px 0;
+        }
+        .footer {
+          font-size: 0.85rem;
         }
       }
     </style>
   </head>
   <body>
-    <header class="landing-header">
-      <img
-        src="site-lib/media/institute.png"
-        alt="Course Logo"
-        class="course-logo"
-        style="height: 64px"
-      />
-      <h1 style="font-size: 2.5rem; color: #3730a3; margin-bottom: 0.5rem">
-        Programming Technology
-      </h1>
-      <p class="subtitle">
-        Welcome to the course materials portal for the Programming Technology
-        discipline.
-      </p>
-    </header>
-    <!-- <nav class="landing-nav">
-      <ul>
-        <li><a href="#lectures">Lectures</a></li>
-        <li><a href="#assignments">Assignments</a></li>
-        <li><a href="#resources">Resources</a></li>
-      </ul>
-    </nav> -->
-    <main class="landing-main">
-      <section id="lectures">
-        <h2>Lectures</h2>
-        <p>Access lecture slides, notes, and recordings.</p>
-        <a
-          href="lessons.html"
-          style="color: #6366f1; text-decoration: none; font-weight: 500"
-          >Go to Lessons &rarr;</a
+    <div class="container">
+      <div class="header">
+        <img src="site-lib/media/institute.png" alt="Institute Logo" />
+        <h1>Programming Technology</h1>
+      </div>
+      <div class="intro">
+        <p>
+          Welcome to the Programming Technology! Here you'll find resources,
+          lessons, and materials to help you master programming concepts,
+          algorithms, and practical skills. Start your journey below.
+        </p>
+      </div>
+      <div class="lessons">
+        <h2>Lessons</h2>
+        <h3><b>Тема 1:</b> ОСНОВИ ПРОГРАМУВАННЯ</h3>
+        <a href="pt_01__ll.html">Lesson 1: Введення у програмування</a>
+        <a href="pt_02__gl.html"
+          >Lesson 2: Редактори початкового коду для розробки програм мовою
+          Python</a
         >
-      </section>
-      <section id="assignments">
-        <h2>Assignments</h2>
-        <p>Find programming assignments and submission guidelines.</p>
-        <!-- Add links to assignments here -->
-      </section>
-      <section id="resources">
-        <h2>Resources</h2>
-        <p>Explore additional resources, recommended readings, and tools.</p>
-        <!-- Add links to resources here -->
-      </section>
-    </main>
-    <footer class="landing-footer">
-      <p>&copy; 2025 Programming Technology. All rights reserved.</p>
-    </footer>
+      </div>
+      <div class="footer">
+        &copy; 2025 Programming Technology. All rights reserved.
+      </div>
+    </div>
   </body>
 </html>
